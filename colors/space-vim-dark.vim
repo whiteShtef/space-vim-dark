@@ -1,4 +1,4 @@
-" Vim color file
+a" Vim color file
 "
 " Author: Liu-Cheng Xu
 " URL: https://github.com/liuchengxu/space-vim-dark
@@ -272,6 +272,19 @@ hi SVDGreenBold  guifg=#20af81 ctermfg=36  gui=bold cterm=bold
 hi SVDYellowBold guifg=#67b11d ctermfg=114 gui=bold cterm=bold
 hi SVDOrangeBold guifg=#b1951d ctermfg=137 gui=bold cterm=bold
 
+hi SVDPink       guifg=#CC3366 ctermfg=207
+hi SVDPinkLight  guifg=#FF62B0 ctermfg=167
+hi SVDPurple     guifg=#D54FD5 ctermfg=170
+hi SVDDarkBlue   guifg=#5f87d7 ctermfg=68
+hi SVDAquaLight  guifg=#2aa1ae ctermfg=72 "<- ctermfg not correct TODO
+
+hi SVDPurpleBold guifg=#D54FD5 ctermfg=170 gui=bold cterm=bold
+hi SVDAquaLightBold guifg=#2aa1ae ctermfg=72 gui=bold cterm=bold
+hi SVDDarkBlueBold guifg=#5f87d7 ctermfg=68 gui=bold cterm=bold
+hi SVDPinkBold   guifg=#CC3366 ctermfg=207 gui=bold cterm=bold
+hi SVDPinkLightBold guifg=#FF62B0 ctermfg=167 gui=bold cterm=bold
+
+
 """""""""""""""""""""""""""""""""""""""""""
 " Language
 """""""""""""""""""""""""""""""""""""""""""
@@ -316,12 +329,36 @@ hi link xmlTagName Identifier
 hi link htmlSpecialTagName Tag
 hi link htmlItalic String
 
+" vim-polyglot (python)
+hi link pythonDecorator SVDPinkBold 
+hi link pythonStatement SVDBlueBold 
+hi link pythonRepeat    SVDBlueBold
+hi link pythonConditional SVDBlueBold
+hi link pythonImport    SVDBlueBold
+hi link pythonException SVDBlueBold
+hi link pythonExClass   SVDPinkBold
+hi link pythonOperator  SVDBlueBold
+hi link pythonString    SVDGreen
+hi link pythonComment   SVDAquaLight
+hi link pythonBString   SVDGreen
+hi link pythonBEscape   SVDGreen
+hi link pythonRawString SVDGreen
+hi link pythonDocTest   SVDGreen
+hi link pythonDocTest2  SVDGreen
+
+hi link pythonHexNumber SVDMagenta
+hi link pythonNumber    SVDMagenta
+hi link pythonFloat     SVDMagenta
+
+hi link pythonFunction       SVDPinkBold 
+hi link pythonBuiltinFunc    SVDPurpleBold
+
 " python-mode
 hi pythonLambdaExpr      ctermfg=105 guifg=#8787ff
 hi pythonInclude         ctermfg=68  guifg=#5f87d7 cterm=bold gui=bold
 hi pythonClass           ctermfg=167 guifg=#FF62B0 cterm=bold gui=bold
 hi pythonParameters      ctermfg=147 guifg=#AAAAFF
-hi pythonParam           ctermfg=175 guifg=#67b11d
+hi pythonParam           ctermfg=167 guifg=#FF62B0
 hi pythonBrackets        ctermfg=183 guifg=#d7afff
 hi pythonClassParameters ctermfg=111 guifg=#FF5353
 hi pythonSelf            ctermfg=68  guifg=#5f87d7 cterm=bold gui=bold
@@ -340,6 +377,8 @@ hi pythonBuiltinObj      ctermfg=71  guifg=#5faf5f cterm=bold gui=bold
 hi pythonBuiltinFunc     ctermfg=169 guifg=#d75faf cterm=bold gui=bold
 
 hi pythonException       ctermfg=207 guifg=#CC3366 cterm=bold gui=bold
+
+"
 
 """""""""""""""""""""""""""""""""""""""""""
 " Plugins
@@ -413,3 +452,4 @@ unlet s:color_map s:bg
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
+
